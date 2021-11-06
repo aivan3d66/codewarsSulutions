@@ -1,11 +1,13 @@
-//Iterate with JavaScript Do...While Loops
+//Compare Scopes of the var and let Keywords
 
-// Setup
-const myArray = [];
-let i = 10;
-
-// Only change code below this line
-while (i < 5) {
-    myArray.push(i);
-    i++;
+function checkScope() {
+    let i = 'function scope';
+    if (false) {
+        i = 'block scope';
+        console.log('Block scope i is: ', i);
+    }
+    console.log('Function scope i is: ', i);
+    return i;
 }
+
+checkScope();
