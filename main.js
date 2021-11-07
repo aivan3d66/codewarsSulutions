@@ -98,3 +98,12 @@ console.log(lowToday, highToday);
 let a = 8, b = 6;
 [b, a] = [a, b];
 console.log(a,b);
+
+//  Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+    const [a, b, ...arr] = list;
+    return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
