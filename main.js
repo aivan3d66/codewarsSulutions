@@ -352,3 +352,12 @@ function isEveryoneHere(userObj) {
 }
 
 console.log(isEveryoneHere(users));
+
+//  Iterate Through the Keys of an Object with a for...in Statement
+function countOnline(usersObj) {
+    // Only change code below this line
+    let n = 0;
+    for (let user in usersObj) if (usersObj[user].online) n++;
+    return n;
+    // Only change code above this line
+}
