@@ -478,3 +478,13 @@ function largestOfFour(arr) {
 
     return max;
 }
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+//  Confirm the Ending
+function confirmEnding(str, target) {
+    let reg = new RegExp(target + '$');
+    return reg.test(str);
+}
+
+confirmEnding("Bastian", "n");
