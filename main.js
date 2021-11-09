@@ -427,3 +427,27 @@ function convertToF(celsius) {
 }
 
 convertToF(30);
+
+//  Reverse a String
+function reverseString(str) {
+    let arrayOfString = str.split('');
+    let reverseOfArray = arrayOfString.reverse();
+    let reverseOfString = reverseOfArray.join('');
+    str = reverseOfString;
+    return str;
+}
+
+reverseString("hello");
+
+//  Factorialize a Number
+function factorialize(num) {
+    let prevNum = 0;
+    let newNum = 1;
+    while (prevNum < num) {
+        prevNum++;
+        newNum *= prevNum;
+    }
+    return newNum;
+}
+
+factorialize(5);
