@@ -464,3 +464,17 @@ function findLongestWordLength(str) {
 }
 
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+//  Return Largest Numbers in Arrays
+function largestOfFour(arr) {
+    let max = [];
+
+    for (let i = 0; i < arr.length; i++) {
+
+        let elem = Math.max.apply(null, arr[i]);
+        max.push(elem);
+        console.log(max);
+    }
+
+    return max;
+}
