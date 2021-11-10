@@ -854,3 +854,9 @@ function countWords(str) {
     arr = arr.filter(el => el !== '')
     return arr.length
 }
+
+// Remove First and Last Character Part Two
+
+function array(arr){
+    return arr.split(",").slice(1,-1).join(" ") || null;
+}
