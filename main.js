@@ -845,3 +845,12 @@ function partitionOn(pred, items) {
     items.push.apply(items, falsies.concat(truthies));
     return falsies.length;
 }
+
+// Count words
+function countWords(str) {
+    let arr;
+    str = str.trim().replace('\ufeff', ' ')
+    arr = str.split(' ')
+    arr = arr.filter(el => el !== '')
+    return arr.length
+}
