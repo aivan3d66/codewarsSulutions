@@ -692,3 +692,15 @@ function bouncer(arr) {
 }
 
 bouncer([7, "ate", "", false, 9]);
+
+//  Where do I Belong
+function getIndexToIns(arr, num) {
+    let newArr = arr.push(num);
+    let sortedArr = arr.sort(function(a, b){
+        return a - b;
+    });
+
+    return sortedArr.indexOf(num);
+}
+
+getIndexToIns([40, 60], 50);
