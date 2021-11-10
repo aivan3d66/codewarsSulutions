@@ -656,3 +656,19 @@ function booWho(bool) {
 }
 
 booWho(null);
+
+//  Title Case a Sentence
+function titleCase(str) {
+    let capArr = [];
+    let newStr = '';
+    let lowerCaseArr = str.toLowerCase().split(' ');
+
+    for (let i = 0; i < lowerCaseArr.length; i++){
+
+        capArr[i] = lowerCaseArr[i].charAt(0).toUpperCase() + lowerCaseArr[i].slice(1).toLowerCase();
+    }
+
+    return newStr = capArr.join(' ');
+}
+
+titleCase("I'm a little tea pot");
