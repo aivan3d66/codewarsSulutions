@@ -816,3 +816,9 @@ function basicOp(operation, value1, value2)
     }
     return result;
 }
+
+// Printing Array elements with Comma delimiters
+
+function printArray(array){
+    return array.join(',');
+}
