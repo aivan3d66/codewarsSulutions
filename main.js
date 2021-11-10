@@ -788,3 +788,9 @@ function sum(num) {
     }
     return split(num, num);
 }
+
+//  Opposite number
+
+function opposite(number) {
+    return number = -number;
+}
