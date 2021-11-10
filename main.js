@@ -925,3 +925,11 @@ function compose() {
         return result;
     }
 }
+
+// Stringing me along
+function createMessage(str) {
+    return (str1) => {
+        if (!str1) return str;
+        return createMessage(str+' '+str1)
+    }
+}
