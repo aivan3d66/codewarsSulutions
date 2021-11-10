@@ -907,3 +907,8 @@ function createFunctions(n) {
 
     return callbacks;
 }
+
+// Function Composition
+function compose(f,g) {
+    return (...args) => f(g(...args));
+}
