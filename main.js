@@ -872,3 +872,8 @@ function prefill(n, v) {
         throw new TypeError(n+' is invalid');
     }
 }
+
+// Sequence generator
+function sequence(n, pattern) {
+    return [...Array(n)].map(typeof pattern == 'function' ? pattern : () => pattern);
+}
