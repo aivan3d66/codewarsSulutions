@@ -998,3 +998,11 @@ function dividedBy(a2) {
         return Math.floor(a1 / a2)
     }
 }
+
+// SantaClausable Interface
+function isSantaClausable(obj) {
+    if (typeof obj["sayHoHoHo"] != "function") return false;
+    if (typeof obj["distributeGifts"] != "function") return false;
+    if (typeof obj["goDownTheChimney"] != "function") return false;
+    return true;
+}
