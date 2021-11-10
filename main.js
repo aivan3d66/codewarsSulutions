@@ -1157,3 +1157,12 @@ let dog = {
 };
 
 dog.sayLegs();
+
+//  Make Code More Reusable with the this Keyword #2
+let dog = {
+    name: "Spot",
+    numLegs: 4,
+    sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
+};
+
+dog.sayLegs();
