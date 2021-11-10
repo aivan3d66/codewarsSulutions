@@ -831,3 +831,8 @@ function rentalCarCost(d) {
 
     return (d * 40) - day - week;
 }
+
+// Get the Middle Character
+function getMiddle(s) {
+    return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
