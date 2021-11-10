@@ -1148,3 +1148,12 @@ function dice(minimum, maximum){
     let rand = minimum + Math.random() * (maximum + 1 - minimum);
     return Math.floor(rand);
 }
+
+//  Make Code More Reusable with the this Keyword
+let dog = {
+    name: "Spot",
+    numLegs: 4,
+    sayLegs: function() {return "This dog has " + dog.numLegs + " legs.";}
+};
+
+dog.sayLegs();
