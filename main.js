@@ -1166,3 +1166,12 @@ let dog = {
 };
 
 dog.sayLegs();
+
+//  Define a Constructor Function
+function Dog() {
+    this.name = "Spike";
+    this.color = "gray";
+    this.numLegs = 4;
+}
+
+
