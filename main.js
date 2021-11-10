@@ -1046,3 +1046,13 @@ Array.prototype.even = function() {
 Array.prototype.odd = function() {
     return this.filter(el => !!(el%2))
 };
+
+// Replicate `new`
+function nouveau (Constructor) {
+    let args = [].slice.call(arguments, 1);
+    let obj = Object.create(Constructor.prototype);
+
+    let res = Constructor.apply(obj, args);
+
+    return Object(res) === res ? res : obj;
+}
