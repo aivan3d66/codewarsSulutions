@@ -1056,3 +1056,13 @@ function nouveau (Constructor) {
 
     return Object(res) === res ? res : obj;
 }
+
+// Sum of Digits / Digital Root
+function digital_root(n) {
+    let digital_str = String(n);
+    if (digital_str.length === 1) {
+        return n;
+    }
+    let result = Array.from(digital_str).reduce((acc, i) => acc + +i, 0);
+    return digital_root(result);
+}
