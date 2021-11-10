@@ -704,3 +704,16 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([40, 60], 50);
+
+//  Mutations
+function mutation(arr) {
+    let baseStr = arr[0].toLowerCase().split('');
+    let testStr = arr[1].toLowerCase().split('');
+
+    return testStr.every(function(char) {
+        return baseStr.indexOf(char) !== -1;
+    });
+}
+
+mutation(["hello", "hey"]);
+
