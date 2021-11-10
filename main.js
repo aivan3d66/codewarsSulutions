@@ -612,3 +612,20 @@ function mix(s1, s2) {
         return a[0] + ':' + a[1];
     }).join('/');
 }
+
+//  Repeat a String Repeat a String
+function repeatStringNumTimes(str, num) {
+    // repeat after me
+    let newStr = '';
+
+    // with a 'for' loop
+
+    // with a 'while' loop
+    while (num > 0) {
+        newStr += str;
+        num--;
+    }
+    return newStr;
+}
+
+repeatStringNumTimes("abc", 3);
