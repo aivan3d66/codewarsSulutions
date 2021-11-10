@@ -1141,3 +1141,10 @@ function solution(string) {
 
     return newStr.join('');
 }
+
+
+//  Dice Rolling
+function dice(minimum, maximum){
+    let rand = minimum + Math.random() * (maximum + 1 - minimum);
+    return Math.floor(rand);
+}
