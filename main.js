@@ -890,3 +890,20 @@ function add(n) {
     };
     return f;
 }
+
+// Closures and Scopes
+function createFunctions(n) {
+    let callbacks = [];
+
+    let fu = function(x) {
+        return function() {
+            return x
+        };
+    };
+
+    for (var i=0; i<n; i++) {
+        callbacks.push(fu(i));
+    }
+
+    return callbacks;
+}
