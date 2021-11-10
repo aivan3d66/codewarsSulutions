@@ -1066,3 +1066,32 @@ function digital_root(n) {
     let result = Array.from(digital_str).reduce((acc, i) => acc + +i, 0);
     return digital_root(result);
 }
+
+// Fun with ES6 Classes #2 - Animals and Inheritance
+class Shark extends Animal {
+    constructor(name, age, status) {
+        super(name, age, 0, "shark", status);
+    }
+}
+
+class Cat extends Animal {
+    constructor(name, age, status) {
+        super(name, age, 4, "cat", status);
+    }
+
+    introduce() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.  Meow meow!`;
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, age, status, master) {
+        super(name, age, 4, "dog", status);
+
+        this.master = master;
+    }
+
+    greetMaster() {
+        return `Hello ${this.master}`;
+    }
+}
