@@ -877,3 +877,16 @@ function prefill(n, v) {
 function sequence(n, pattern) {
     return [...Array(n)].map(typeof pattern == 'function' ? pattern : () => pattern);
 }
+
+// A Chain adding function
+function add(n) {
+    let sum = n;
+    function f(y) {
+        sum += y;
+        return f;
+    }
+    f.valueOf = function() {
+        return sum;
+    };
+    return f;
+}
