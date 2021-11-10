@@ -836,3 +836,12 @@ function rentalCarCost(d) {
 function getMiddle(s) {
     return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
 }
+
+// Partition On
+function partitionOn(pred, items) {
+    let truthies = items.filter(pred);
+    let falsies = items.filter(function (a) { return !pred(a) });
+    items.length = 0;
+    items.push.apply(items, falsies.concat(truthies));
+    return falsies.length;
+}
