@@ -860,3 +860,15 @@ function countWords(str) {
 function array(arr){
     return arr.split(",").slice(1,-1).join(" ") || null;
 }
+
+// Prefill an Array
+function prefill(n, v) {
+    try {
+        let arr = Array.apply(null, Array(typeof n=='boolean'? parseInt(n): +n));
+        return arr.map(function() {
+            return v;
+        });
+    } catch (e) {
+        throw new TypeError(n+' is invalid');
+    }
+}
