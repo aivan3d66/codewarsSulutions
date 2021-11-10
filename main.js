@@ -912,3 +912,16 @@ function createFunctions(n) {
 function compose(f,g) {
     return (...args) => f(g(...args));
 }
+
+// Function composition
+function compose() {
+    let args = arguments;
+    return function(num) {
+        let result = num;
+        for (let i= 0; i < args.length; i++) {
+            let func = args[args.length - i - 1];
+            result = func(result);
+        }
+        return result;
+    }
+}
