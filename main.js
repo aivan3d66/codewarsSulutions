@@ -1126,3 +1126,18 @@ function construct(Class) {
     Class.apply(obj, Array.prototype.slice.call(arguments, 1));
     return obj;
 }
+
+// Break camelCase
+function solution(string) {
+    let newStr = [];
+    string.split('').map(function(item) {
+        if (item != item.toUpperCase()) {
+            newStr.push(item);
+        } else {
+            newStr.push(' ');
+            newStr.push(item);
+        }
+    })
+
+    return newStr.join('');
+}
