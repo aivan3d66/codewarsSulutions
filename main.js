@@ -1266,3 +1266,13 @@ function openOrSenior(data){
     });
     return newArr;
 }
+
+// Convert boolean values to strings 'Yes' or 'No'.
+function boolToWord( bool ){
+    let bull = bool;
+    if (bull === true) {
+        return 'Yes';
+    } else {
+        return 'No';
+    }
+}
