@@ -1247,3 +1247,8 @@ function filter_list(l) {
     }
     return newArr;
 }
+
+// Square(n) Sum
+function squareSum(numbers){
+    return numbers.reduce((prev, item) => prev + item * item, 0)
+}
