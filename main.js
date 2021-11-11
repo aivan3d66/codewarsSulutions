@@ -1235,3 +1235,15 @@ function friend(friends){
     }
     return friendsArr;
 }
+
+// List Filtering
+function filter_list(l) {
+    let newArr = [];
+    for (let i = 0; i <= l.length; i++) {
+        let val = l[i];
+        if (typeof l[i] === 'number') {
+            newArr.push(val);
+        }
+    }
+    return newArr;
+}
