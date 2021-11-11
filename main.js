@@ -1252,3 +1252,17 @@ function filter_list(l) {
 function squareSum(numbers){
     return numbers.reduce((prev, item) => prev + item * item, 0)
 }
+
+// Categorize New Member
+function openOrSenior(data){
+    let newArr = [];
+
+    data.map((item) => {
+        if (item[0] >= 55 && item[1] > 7) {
+            newArr.push("Senior")
+        } else {
+            newArr.push("Open")
+        }
+    });
+    return newArr;
+}
