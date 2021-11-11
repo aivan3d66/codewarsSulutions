@@ -1758,3 +1758,12 @@ let funModule  = (function () {
         }
     }
 })();
+
+//  Extract the domain name from a URL
+function domainName(url){
+    let arr = url.split('.');
+    if (arr[0].includes('www')) return arr[1];
+    if (!arr[0].includes('http')) return arr[0];
+    return arr[0].slice(arr[0].indexOf('//')+2, arr[0].length);
+}
+
