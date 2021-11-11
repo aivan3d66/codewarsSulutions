@@ -1196,3 +1196,9 @@ myHouse instanceof House;
 function order(words){
     return words.split(' ').sort((a,b) => a.match(/[0-9]/) - b.match(/[0-9]/)).join(' ');
 }
+
+// Sort the odd
+function sortArray(array) {
+    let odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+    return array.map((x) => x % 2 ? odd.shift() : x);
+}
