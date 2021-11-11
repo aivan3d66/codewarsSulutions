@@ -1809,3 +1809,22 @@ function persistence(num) {
 function noSpace(x){
     return x.replace(/\s/g, '');
 }
+
+//  Remove String Spaces
+function maxRot(n) {
+    let arr = [n];
+    let len = (n + '').length;
+    function cycle(item, time){
+        let str = (item + '').split('');
+        let tArr = str.slice(0, time - 1).concat(str.slice(time));
+        tArr.push(str[time - 1]);
+        let num = Number(tArr.join(''));
+        arr.push(num)
+        time++;
+        if(time <= len -1){
+            cycle(num, time);
+        }
+    }
+    cycle(n, 1);
+    return Math.max.apply(0, arr);
+}
