@@ -1493,20 +1493,3 @@ const sum = (...args) => {
     return args.reduce((a, b) => a + b, 0);
 }
 console.log(sum(2,3));
-
-//  Use the Spread Operator to Evaluate Arrays In-Place
-const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
-let arr2;
-
-arr2 = [...arr1];
-console.log(arr2);
-
-//  Use Destructuring Assignment to Extract Values from Objects
-const HIGH_TEMPERATURES = {
-    yesterday: 75,
-    today: 77,
-    tomorrow: 80
-};
-
-const {today, tomorrow} = HIGH_TEMPERATURES;
-console.log(today, tomorrow);
