@@ -1191,3 +1191,8 @@ function House(numBedrooms) {
 // Only change code below this line
 let myHouse = new House(4);
 myHouse instanceof House;
+
+// Your order, please
+function order(words){
+    return words.split(' ').sort((a,b) => a.match(/[0-9]/) - b.match(/[0-9]/)).join(' ');
+}
