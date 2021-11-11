@@ -1292,3 +1292,23 @@ function rot13(message){
     const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
     return message.replace(/[a-z]/gi, letter => alpha[alpha.indexOf(letter) + 13]);
 }
+
+//  isPP
+var isPP = function(n){
+    var current = 2,
+      power = 2,
+      max = Math.floor( n / 2 );
+
+    while ( current <= max ) {
+        power = 2;
+        while ( Math.pow( current, power ) <= n ) {
+            if ( n === Math.pow( current, power ) ) {
+                return [ current, power ];
+            } else {
+                power += 1;
+            }
+        }
+        current += 1;
+    }
+    return null;
+}
