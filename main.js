@@ -1218,3 +1218,8 @@ function expandedForm(num) {
 String.prototype.toJadenCase = function () {
     return this.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
 };
+
+// Reversed Strings
+function solution(str){
+    return str.split('').reverse().join('');
+}
