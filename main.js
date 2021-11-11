@@ -1223,3 +1223,15 @@ String.prototype.toJadenCase = function () {
 function solution(str){
     return str.split('').reverse().join('');
 }
+
+// Friend or Foe?
+function friend(friends){
+    let friendsArr = [];
+    for (let i = 0; i < friends.length; i++) {
+        let val = friends[i];
+        if (val.length === 4 && typeof val === 'string' && !Number(val)) {
+            friendsArr.push(val);
+        }
+    }
+    return friendsArr;
+}
