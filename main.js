@@ -1213,3 +1213,8 @@ function expandedForm(num) {
     .reverse()
     .join(" + ");
 }
+
+// Jaden Casing Strings
+String.prototype.toJadenCase = function () {
+    return this.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
+};
