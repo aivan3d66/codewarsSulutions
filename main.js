@@ -1493,3 +1493,18 @@ const sum = (...args) => {
     return args.reduce((a, b) => a + b, 0);
 }
 console.log(sum(2,3));
+
+//  Understand Own Properties
+function Bird(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+
+for (let property in canary) {
+    if(canary.hasOwnProperty(property)) {
+        ownProps.push(property);
+    }
+}
