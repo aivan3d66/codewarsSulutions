@@ -1828,3 +1828,6 @@ function maxRot(n) {
     cycle(n, 1);
     return Math.max.apply(0, arr);
 }
+
+//  Use an Array to Store a Collection of Data
+let yourArray = ['one', 2, true, undefined, null];
