@@ -1923,3 +1923,9 @@ const bicycle = {
 };
 bicycle.setGear(3);
 console.log(bicycle.gear);
+
+//  Write Concise Object Literal Declarations Using Object Property Shorthand
+const createPerson = (name, age, gender) => {
+    return {name,age,gender};
+};
+console.log(createPerson);
