@@ -1831,3 +1831,8 @@ function maxRot(n) {
 
 //  Use an Array to Store a Collection of Data
 let yourArray = ['one', 2, true, undefined, null];
+
+//  Access an Array's Contents Using Bracket Notation
+let myArray = ["a", "b", "c", "d"];
+myArray[1] = "e";
+console.log(myArray);
