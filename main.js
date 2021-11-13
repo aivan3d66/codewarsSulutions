@@ -1857,3 +1857,22 @@ function zeroArray(m, n) {
 
 let matrix = zeroArray(3, 2);
 console.log(matrix);
+
+//  Complete a Promise with resolve and reject, then and catch
+const makeServerRequest = new Promise((resolve, reject) => {
+    let responseFromServer;
+
+    if (responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+
+makeServerRequest.then(result  => {
+    console.log(result);
+});
+
+makeServerRequest.catch(error => {
+    console.log(error);
+});
