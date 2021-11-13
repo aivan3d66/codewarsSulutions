@@ -1882,3 +1882,9 @@ import * as stringFunctions from './string_functions.js';
 
 stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
+
+//  Reuse JavaScript Code Using import
+import {uppercaseString, lowercaseString} from './string_functions.js';
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
