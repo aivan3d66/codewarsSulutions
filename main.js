@@ -1929,3 +1929,7 @@ const createPerson = (name, age, gender) => {
     return {name,age,gender};
 };
 console.log(createPerson);
+
+//  Don't rely on luck.
+let guess = 101;
+Math.random = () => 1;
