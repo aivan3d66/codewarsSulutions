@@ -1933,3 +1933,6 @@ console.log(createPerson);
 //  Don't rely on luck.
 let guess = 101;
 Math.random = () => 1;
+
+//  Corner circle
+const cornerCircle = (r) => +(r * (3 - 2 * Math.SQRT2)).toFixed(2);
