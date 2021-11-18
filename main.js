@@ -1946,3 +1946,9 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
         return doubledSonsAge - dadYearsOld
     }
 }
+
+//  Remove First and Last Character
+function removeChar(str){
+    const newStr = str.slice(1,-1);
+    return newStr;
+};
