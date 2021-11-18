@@ -1936,3 +1936,13 @@ Math.random = () => 1;
 
 //  Corner circle
 const cornerCircle = (r) => +(r * (3 - 2 * Math.SQRT2)).toFixed(2);
+
+//  Twice as old
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+    const doubledSonsAge = sonYearsOld * 2
+    if (dadYearsOld >= doubledSonsAge) {
+        return dadYearsOld - doubledSonsAge
+    } else {
+        return doubledSonsAge - dadYearsOld
+    }
+}
