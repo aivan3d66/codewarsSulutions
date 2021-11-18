@@ -2012,3 +2012,21 @@ function NameMe(first, last) {
 function saleHotdogs(n) {
     return (n < 5) ? n * 100 : (n >= 5 && n < 10) ? n * 95 : n * 90;
 }
+
+//  Convert a Number to a String!
+function numberToString(num) {
+    return num.toString();
+}
+
+//  Take a Ten Minute Walk
+function isValidWalk(walk) {
+    let ns = 0, we = 0;
+    for (let dir of walk) {
+        if (dir == 'n') ns += 1;
+        if (dir == 's') ns -= 1;
+        if (dir == 'w') we += 1;
+        if (dir == 'e') we -= 1;
+    }
+
+    return walk.length == 10 && ns === 0 && we === 0;
+}
