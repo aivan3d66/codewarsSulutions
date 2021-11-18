@@ -1952,3 +1952,18 @@ function removeChar(str){
     const newStr = str.slice(1,-1);
     return newStr;
 };
+
+
+//  Get the mean of an array
+function getAverage(marks){
+    return Math.floor(marks.reduce((prev, cur) => prev + cur, 0) / marks.length);
+}
+
+//  Unexpected parsing
+function getStatus(isBusy) {
+    var msg = (isBusy ? "busy" : "available");
+
+    return {
+        status: msg
+    }
+}
