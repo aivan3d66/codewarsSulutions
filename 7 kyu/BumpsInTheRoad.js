@@ -4,3 +4,9 @@
 //  Given a string showing either flat road ("_") or
 //  bumps ("n"), work out if you make it home safely.
 //  15 bumps or under, return "Woohoo!", over 15 bumps return "Car Dead".
+
+const bump = (x) => {
+  return x.match(/n{1}/g) !== null && x.match(/n{1}/g).length > 15 ? 'Car Dead' : 'Woohoo!';
+}
+
+console.log(bump("n"));
