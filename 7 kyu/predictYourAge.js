@@ -8,3 +8,14 @@
 // Add them all together.
 // Take the square root of the result.
 // Divide by two.
+
+const predictAge = (age1, age2, age3, age4, age5, age6, age7, age8) => {
+  let arr = [];
+  for (let i = 0; i < arguments.length; i++) {
+    arr[i] = arguments[i];
+    arr[i] *= arr[i];
+  }
+  return Math.floor(Math.sqrt(arr.reduce((acum, e) => acum += e)) / 2);
+}
+
+console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45))
