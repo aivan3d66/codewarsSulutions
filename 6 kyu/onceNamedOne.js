@@ -44,3 +44,10 @@
 // var otherOne = new OnceNamedOne("Don","Jones")
 // otherOne.fullName // -> "Don Jones"
 // Can you change our function to create such a OnceNamedOne object ?
+
+function OnceNamedOne(first, last) {
+  this.firstName = first;
+  this.lastName = last;
+  this.fullName = this.firstName + ' ' + this.lastName;
+  Object.freeze(this)
+}
