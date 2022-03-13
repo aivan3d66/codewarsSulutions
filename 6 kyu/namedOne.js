@@ -27,3 +27,9 @@
 //   If .firstName or .lastName are changed, then .fullName should also be changed
 // If .fullName is changed, then .firstName and .lastName should also be changed.
 //   Note : "input format" to .fullName will be firstName + space+ lastName. If given fullName isn't valid then no property is changed.
+
+class NamedOne {
+  constructor(f, l) { this.firstName = f; this.lastName = l }
+  get fullName() { return this.firstName + ' ' + this.lastName }
+  set fullName(v) { if (/ /.test(v)) [this.firstName, this.lastName] = v.split(' ') }
+}
