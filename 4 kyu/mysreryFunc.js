@@ -20,3 +20,20 @@
 // You are also asked to implement mystery_inv ( or mysteryInv ), the inverse of mystery. Finally, you are asked to implement a function name_of_mystery ( or nameOfMystery ), which shall return the name that mystery is more commonly known as. After passing all tests you are free to learn more about this function on Wikipedia or another place.
 //
 // Hint: If you don't know the name of mystery, remember there is information in passing as well as failing a test.
+
+function mystery(n) {
+    return n ^ (n >> 1);
+}
+
+function mysteryInv(n) {
+    let mask = n >> 1;
+    while (mask != 0) {
+        n = n ^ mask;
+        mask = mask >> 1;
+    }
+    return n;
+}
+
+function nameOfMystery() {
+    return 'Gray code';
+}
