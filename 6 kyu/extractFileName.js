@@ -19,3 +19,9 @@
 // Acceptable characters for random tests: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-0123456789
 //
 // The recommended way to solve it is using RegEx and specifically groups.
+
+class FileNameExtractor {
+    static extractFileName(dirtyFileName) {
+        return dirtyFileName.match(/[^\d][\w_-]+\.[\w]+/)[0].slice(1);
+    }
+}
