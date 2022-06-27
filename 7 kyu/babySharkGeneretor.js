@@ -31,3 +31,11 @@
 // Let's go hunt, doo doo doo doo doo doo
 // Let's go hunt!
 // Run away,…
+
+let n = ['Baby shark','Mommy shark','Daddy shark','Grandma shark','Grandpa shark',"Let's go hunt"];
+let doo = x => x + "," + ' doo'.repeat(6) + "\n";
+let line = v => doo(v).repeat(3) + `${v}!\n`
+
+function babySharkLyrics(){
+    return n.reduce((a,v) => a+line(v) , "") + 'Run away,…'
+}
