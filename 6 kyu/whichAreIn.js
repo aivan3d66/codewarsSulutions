@@ -18,3 +18,7 @@
 //     Arrays are written in "general" notation. See "Your Test Cases" for examples in your language.
 //     In Shell bash a1 and a2 are strings. The return is a string where words are separated by commas.
 //     Beware: r must be without duplicates.
+
+function inArray(array1,array2){
+    return array1.filter((e) => array2.some((z) => z.indexOf(e) !== -1)).sort();
+}
