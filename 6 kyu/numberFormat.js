@@ -5,3 +5,11 @@
 // numberFormat(100000); // return '100,000'
 // numberFormat(5678545); // return '5,678,545'
 // numberFormat(-420902); // return '-420,902'
+
+var numberFormat = function (number) {
+  var x = number.toString();
+  var pattern = /(-?\d+)(\d{3})/;
+  while (pattern.test(x))
+    x = x.replace(pattern, "$1,$2");
+  return x;
+};
