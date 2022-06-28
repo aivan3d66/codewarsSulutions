@@ -8,3 +8,21 @@
 // getNum(3479283469) #-> returns 5
 // The archaeologists were totally stuck with this challenge. They were all in desperation but then....
 // came YOU the SUPER-AWESOME programmer. Will you be able to understand the mystery of this function and rewrite it?
+
+let getNum = function (n) {
+  let str = n.toString(),
+    sum = 0;
+  for (let i = 0; i < str.length; i++) {
+    switch (str[i]) {
+      case '0':
+      case '6':
+      case '9':
+        sum++;
+        break;
+      case '8':
+        sum += 2;
+        break;
+    }
+  }
+  return sum;
+};
