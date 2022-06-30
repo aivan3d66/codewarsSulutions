@@ -7,3 +7,14 @@
 // Customers in the dictionary are represented as:
 //
 // { 'customerName' : [list_of_order_values_as_integers] }
+
+function pizzaRewards(customers, minOrders, minPrice) {
+  let goodCustomers = [];
+
+  for (let user in customers) {
+    if (customers[user].filter(e => e >= minPrice).length >= minOrders) {
+      goodCustomers.push(user);
+    }
+  }
+  return goodCustomers;
+}
