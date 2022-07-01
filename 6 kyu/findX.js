@@ -28,3 +28,5 @@
 //
 // Note: This problem is more about logical reasoning than
 // it is about finding a mathematicial formula, infact there are no complex math formula involved
+
+const findX = n => n * n * (3 * n - 2);
