@@ -18,3 +18,12 @@
 // odd ones are 1, 3, 5, 7, so the second group is 'oeas'
 // And the final string to return is 'Cdwr oeas'
 
+function sortMyString(S) {
+  let odd = "",
+    even = "";
+  S.split('').map((e, i) => {
+    if (i % 2 === 0) even += e;
+    else odd += e;
+  });
+  return even + " " + odd;
+}
