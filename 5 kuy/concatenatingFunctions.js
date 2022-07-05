@@ -15,3 +15,14 @@
 // var result = [1,2,3,4,5].map(addOne.pipe(square)) //-> [4,9,16,25,36]
 // Since a function only can return one value it is absolutely sufficient to only support functions that consume only one parameter.
 // Build your pipe function in a way, that one can pipe an arbitrary number of functions.
+
+var addOne = function(e) {  return e + 1; };
+var square = function(e) {  return e * e; };
+
+Function.prototype.pipe = function(e) {
+  let adder = this;
+  return function(elem) {
+    return e(adder(elem));
+  }
+}
+var result = [1,2,3,4,5].map(addOne.pipe(square)) //-> [4,9,16,25,36]
