@@ -10,3 +10,7 @@
 // isDigit("  3   5")
 // isDigit("3 5")
 // isDigit("zero")
+
+function isDigit(s) {
+    return ((Number.parseFloat(s) && s.search("[-+\/ ]") < 1) || Number.parseFloat(s) === 0);
+}
