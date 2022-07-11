@@ -7,3 +7,9 @@
 //   but please do not use them, they will be detected by the Codewars system (by testing if tests that should fail actually pass)
 //   and you will lose your points. Please use a method that only works for this particular kata.
 //   Finished this one? You are up for a harder challenge: http://www.codewars.com/kata/55041210decf057109000277
+
+let rnd = 0.00000001;
+Math = Object.create(Math, { random: { value: () => rnd += 0.00000001 } });
+Math.random.toString = () => 'function random() { [native code] }';
+Object.freeze(Math);
+guess = 1;
