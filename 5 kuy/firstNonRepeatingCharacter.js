@@ -4,3 +4,11 @@
 // case for the initial letter. For example, the input 'sTreSS' should return 'T'.
 // If a string contains all repeating characters, it should return an empty string ("") or None -- see sample tests.
 
+const firstNonRepeatingLetter = s => {
+  const index = s
+    .toLowerCase()
+    .split('')
+    .findIndex((char, _, s) => s.indexOf(char) === s.lastIndexOf(char))
+
+  return index === -1 ? '' : s[index]
+}
