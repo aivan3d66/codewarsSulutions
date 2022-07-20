@@ -16,3 +16,16 @@
 // anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 // Note for Go
 //   For Go: Empty string slice is expected when there are no anagrams found.
+
+const anagrams = (word, words) =>
+  words.filter(
+    phrase =>
+      phrase
+        .split('')
+        .sort()
+        .join('') ===
+      word
+        .split('')
+        .sort()
+        .join('')
+  )
