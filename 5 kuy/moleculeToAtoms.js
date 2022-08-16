@@ -15,3 +15,18 @@
 // to multiply count of each atom inside the bracket on this index.
 // For example, in Fe(NO3)2 you have one iron atom, two nitrogen atoms and six oxygen atoms.
 // Note that brackets may be round, square or curly and can also be nested. Index after the braces is optional.
+
+function parseMolecule(formula) {
+    const nums = {};
+    (function reduce(molecule, mult) {
+        molecule.match(/[A-Z][a-z]?\d*|\([^\)]+\)\d*|\[[^\]]+\]\d*|{[^}]+}\d*/g).forEach(function(val) {
+            if (val.match(/\[|\]|\(|\)|{|}/g)) {
+                reduce(val.replace(/^(\[|\()|((\]|\)|{|})\d*)$/g, ''), mult*val.match(/\d*$/g)[0]||1);
+            } else {
+                const element = val.replace(/\d/g, '');
+                nums[element] = (nums[element] || 0) + (val.replace(/[A-Za-z]/g, '')||1) * mult;
+            }
+        });
+    }(formula, 1));
+    return nums;
+}
