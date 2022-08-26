@@ -9,3 +9,7 @@
 // how_many_pizzas(8) -> "pizzas: 1, slices: 0"
 // how_many_pizzas(6) -> "pizzas: 0, slices: 5"
 // how_many_pizzas(0) -> "pizzas: 0, slices: 0"
+
+function howManyPizzas(n){
+  return `pizzas: ${n*n/64|0}, slices: ${Math.round((n*n%64)/8)}`
+}
