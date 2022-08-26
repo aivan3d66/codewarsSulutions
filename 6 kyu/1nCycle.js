@@ -21,3 +21,17 @@
 // -
 //
 // cycle(22) = -1 since 1/22 ~ 0.0 45 45 45 45 ...
+
+function cycle(n) {
+  if (n % 2 == 0 || n % 5 == 0) {
+    return -1;
+  } else {
+    let res = 10 % n,
+      c = 1;
+    while (res != 1) {
+      res = (res * 10) % n;
+      c++;
+    }
+    return c;
+  }
+}
