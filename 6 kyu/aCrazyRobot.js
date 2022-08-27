@@ -49,3 +49,20 @@ The units may be feet or meters. Our robot was programmed to "read" both English
 Enjoy iy!!
 (But, what a waste of money just to have a robot to do this.)
 */
+
+function finalDistCrazyRobot(moves, initPos) {
+  let [x,y] = initPos
+  for (let i=0;i<moves.length;i++){
+    if (moves[i][0]==='R'){
+      y+=moves[i][1]
+    } else if (moves[i][0]==='U'){
+      x+=moves[i][1]
+    } else if (moves[i][0]==='L'){
+      y-=moves[i][1]
+    } else if (moves[i][0]==='D'){
+      x-=moves[i][1]
+    }
+  }
+  let [x1,y1]=initPos
+  return Math.hypot(x-x1,y-y1)
+}
