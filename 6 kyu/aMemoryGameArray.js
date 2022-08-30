@@ -19,3 +19,13 @@ Special cases:
 
 if n is odd or zero, an empty array should be returned
  */
+
+function createTiles(n){
+  if (n%2!==0) return []
+  let arr = []
+  for (let i=1;i<=n/2;i++){
+    arr.push(i)
+    arr.push(i)
+  }
+  return arr.slice(0,1).concat(arr.slice(1).sort((a,b)=>Math.round(Math.random())))
+}
