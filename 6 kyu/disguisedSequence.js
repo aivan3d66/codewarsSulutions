@@ -13,3 +13,7 @@ the first one purely algorithmic from the definition of un
 
 the second one - not at all mandatory, but as a complement - is to get a bit your head around and find which sequence is hidden behind un.
  */
+
+function fcn(n) {
+    return 2 ** n;
+}
