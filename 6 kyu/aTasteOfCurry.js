@@ -40,3 +40,9 @@
 //
 // obj.foobar = curry(obj.b, 'bar');
 // obj.foobar() //should return foobar
+
+function curry(fun, ...args) {
+    return function(...arg2) {
+        return fun.call(this, ...args, ...arg2);
+    };
+}
